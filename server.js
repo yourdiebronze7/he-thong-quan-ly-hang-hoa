@@ -8,7 +8,7 @@ app.use(express.json());
 // Connect to MongoDB
 mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/qlhanghoa', { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log('Connection to MongoDB successful'))
-  .catch(err => console.error(`MongoDB connection error: ${err.message}. Please check your connection string.`)); // Improved error message
+  .catch(err => console.error(`MongoDB connection error: ${err.message}`)); // Improved error message
 
 // Routes
 app.get('/', (req, res) => {
