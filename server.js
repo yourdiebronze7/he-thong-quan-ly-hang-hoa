@@ -12,7 +12,7 @@ mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/qlhanghoa
 
 // Routes
 app.get('/', (req, res) => {
-  res.send('Hệ thống quản lý hàng hóa đang hoạt động');
+  res.send('Hệ thống quản lý hàng hóa đang hoạt động!'); // Added exclamation mark
 });
 
 // 404 Error handling
