@@ -15,6 +15,11 @@ app.get('/', (req, res) => {
   res.send('Hệ thống quản lý hàng hóa đang hoạt động');
 });
 
+// 404 Error handling
+app.use((req, res) => {
+  res.status(404).send('Sorry, page not found');
+});
+
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
