@@ -8,7 +8,7 @@ app.use(express.json());
 // Connect to MongoDB
 mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/qlhanghoa', { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log('Connection to MongoDB successful'))
-  .catch(err => console.error(`MongoDB connection error at ${new Date().toISOString()}: ${err.message}`)); // Improved error message with timestamp
+  .catch(err => console.error(`MongoDB connection error at ${new Date().toISOString()}: ${err.message}\n${err.stack}`)); // Improved error message with timestamp and stack trace
 
 // Routes
 app.get('/', (req, res) => {
